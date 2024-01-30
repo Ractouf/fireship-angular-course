@@ -14,27 +14,26 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from '../app-routing.module';
 import { ShellComponent } from './shell/shell.component';
 
+const components = [ShellComponent]
+const modules = [
+  CommonModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatIconModule,
+  LayoutModule,
+  MatSidenavModule,
+  MatListModule,
+  MatMenuModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSnackBarModule,
+  AppRoutingModule
+]
+
 @NgModule({
-  declarations: [
-    ShellComponent
-  ],
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
-    LayoutModule,
-    MatSidenavModule,
-    MatListModule,
-    MatMenuModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSnackBarModule,
-    AppRoutingModule
-  ],
-  exports: [
-    ShellComponent
-  ]
+  declarations: [...components],
+  imports: [...modules],
+  exports: [...components, ...modules]
 })
 export class SharedModule { }
