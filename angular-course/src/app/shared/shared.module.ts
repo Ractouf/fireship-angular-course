@@ -11,7 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
 import { ShellComponent } from './shell/shell.component';
 
 const components = [ShellComponent]
@@ -28,7 +28,7 @@ const modules = [
   MatFormFieldModule,
   MatInputModule,
   MatSnackBarModule,
-  AppRoutingModule
+  RouterModule
 ]
 
 @NgModule({
