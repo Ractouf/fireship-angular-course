@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ClockService } from './clock.service';
 
 @Component({
   selector: 'app-home-page',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
-
+  constructor(public cs: ClockService) { }
 }
