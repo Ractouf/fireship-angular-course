@@ -47,4 +47,7 @@ export class BoardComponent {
     });
   }
 
+  handleDelete() {
+    this.board.id && this.boardService.deleteBoard(this.board.id);
+  }
 }
